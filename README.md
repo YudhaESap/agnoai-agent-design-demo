@@ -16,4 +16,4 @@ Design an LLM-powered research assistant that:
 
 ## 📁 Files
 - `research-agent.yaml`: YAML config for a research agent
-- *(optional)* `planner-flow.jpg`: diagram showing agent orchestration flow
+- `planner-flow.jpg`: diagram showing agent orchestration flow
