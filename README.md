@@ -17,3 +17,9 @@ Design an LLM-powered research assistant that:
 ## 📁 Files
 - `research-agent.yaml`: YAML config for a research agent
 - `planner-flow.jpg`: diagram showing agent orchestration flow
+
+## 🧪 Use Case Example
+> A user asks: “Find the latest LLM papers about medical imaging.”
+1. `ArxivFetcher` pulls matching titles from arXiv
+2. `Summarizer` creates concise summaries
+3. Summaries are stored in memory for later querying
