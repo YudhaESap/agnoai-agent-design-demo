@@ -1,0 +1,28 @@
+# research-agent.yaml
+
+name: ResearchAgent
+description: Gathers and summarizes academic research papers using LLM + external APIs
+
+planner:
+  type: sequential
+  memory: vector-store
+
+agents:
+  - name: ArxivFetcher
+    tools:
+      - name: arxiv_api
+        type: api
+        url: https://api.arxiv.org/v1/query
+    purpose: Search arXiv based on user prompt
+
+  - name: Summarizer
+    tools:
+      - name: openai_summarizer
+        type: llm
+        model: gpt-4
+    memory_usage: store_summary
+    purpose: Summarize top results and store in vector memory
+
+memory:
+  type: vector
+  backend: local
